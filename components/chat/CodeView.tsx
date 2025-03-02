@@ -21,7 +21,7 @@ export default function CodeView() {
     const PROMPT =
       messages[messages?.length - 1].message + ': ' + Prompt.CODE_GEN_PROMPT;
     const result = await axios.post(
-      `${process.env.NEXT_PUBLIC_GEMINI_API_KEY}/api/gen-ai-code`,
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/gen-ai-code`,
       {
         prompt: PROMPT,
       }
