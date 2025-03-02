@@ -14,7 +14,7 @@ import { Loader2Icon } from 'lucide-react';
 export default function CodeView() {
   const [activeTab, setActiveTab] = useState('code');
   const [files, setFiles] = useState(Prompt.DEFAULT_FILE);
-  const { messages, setMessages } = useMessage();
+  const { messages } = useMessage();
   const [loading, setLoading] = useState(false);
   const generateAiCode = async () => {
     setLoading(true);

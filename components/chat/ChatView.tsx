@@ -16,7 +16,7 @@ export default function ChatView() {
   const { messages, setMessages } = useMessage();
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    chatId && getChatData();
+    getChatData();
   }, [chatId]);
   const getChatData = () => {
     const chatData = localStorage.getItem('chat');
